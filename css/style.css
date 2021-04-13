@@ -1,0 +1,125 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:
+	border-box}
+
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100vw;
+	height:100vh
+}
+
+h2{
+	font-family:"Big Shoulders Display",cursive;
+	font-size:3em;
+	text-transform:uppercase;
+	color:#f2f2f2;
+	margin:2rem 0
+}
+
+p{
+	font-family:"Lexend Deca",sans-serif;
+	font-size:15px;
+	color:rgba(255,255,255,0.75);
+	line-height:1.9
+}
+
+input{
+	font-family:"Lexend Deca",sans-serif;
+	border:2px solid #f2f2f2;
+	border-radius:30px;
+	padding:1rem 2rem;
+	margin-top:10em;
+	outline:none
+}
+
+body,input{background-color:#f2f2f2
+}
+.container{
+	border-radius:10px;
+	display:flex;
+	justify-content:center;
+	align-items:center
+}
+
+.container .row{
+	padding:3em;
+	height:auto;
+	width:350px
+}
+
+.container .sedan{
+	background-color:#e38826;
+	border-radius:10px 0 0 10px
+}
+
+.container .sedan .btn-sedan{
+	align-self:flex-end;
+	color:#e38826;
+	cursor:pointer
+}
+
+.container .sedan .btn-sedan:hover{
+	background-color:#e38826;
+	color:rgba(255,255,255,0.75)
+}
+
+.container .suv{
+	background-color:#006970
+}
+
+.container .suv .btn-suv{
+	color:#006970;
+	cursor:pointer
+}
+
+.container .suv .btn-suv:hover{
+	background-color:#006970;
+	color:rgba(255,255,255,0.75)
+}
+
+.container .lux{
+	background-color:#004241;
+	border-radius:0 10px 10px 0
+}
+
+.container .lux .btn-lux{
+	color:#004241;
+	cursor:pointer
+}
+.container .lux .btn-lux:hover{
+	background-color:#004241;
+	color:rgba(255,255,255,0.75)
+}
+
+.attribution{
+	font-size:11px;
+	text-align:center;
+	position:fixed;
+	bottom:0
+}
+
+@media only screen and (max-width: 768px){
+	body{
+		width:auto;
+		height:auto
+	}
+
+.container{
+	flex-direction:column
+}
+
+.container .sedan{
+	border-radius:10px 10px 0 0
+}
+
+.container .lux{
+	border-radius:0 0 10px 10px
+}
+.attribution{
+	right:0
+}
+}

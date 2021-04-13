@@ -1,0 +1,145 @@
+$sedan: hsl(31, 77%, 52%);
+$suv: hsl(184, 100%, 22%);
+$luxury: hsl(179, 100%, 13%);
+$white: hsla(0, 0%, 100%, 0.75);
+$light-gray: hsl(0, 0%, 95%);
+
+$header-font: 'Big Shoulders Display', cursive;
+$body-font: 'Lexend Deca', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h2 {
+    font-family: $header-font;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: $light-gray;
+    margin: 2rem 0;
+}
+
+p {
+    font-family: $body-font;
+    font-size: 15px;
+    color: $white;
+    line-height: 1.9;
+}
+
+input {
+    font-family: $body-font;
+    border: 2px solid $light-gray;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    margin-top: 10em;
+    outline: none;
+}
+
+body, input {
+    background-color: $light-gray;
+}
+
+.container {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+        padding: 3em;
+        height: auto;
+        width: 350px;
+    }
+
+    .sedan {
+        background-color: $sedan;
+        border-radius: 10px 0 0 10px;
+    
+        .btn-sedan {
+            align-self: flex-end;
+            color: $sedan;
+            cursor: pointer;
+        }
+
+        .btn-sedan:hover {
+            background-color: $sedan;
+            color: $white;
+        }
+    }
+    
+    .suv {
+        background-color: $suv;
+
+        .btn-suv {
+            color: $suv;
+            cursor: pointer;
+        }
+
+        .btn-suv:hover {
+            background-color: $suv;
+            color: $white;
+        }
+    }
+    
+    .lux {
+        background-color: $luxury;
+        border-radius: 0 10px 10px 0;
+
+        .btn-lux {
+            color: $luxury;
+            cursor: pointer;
+        }
+
+        .btn-lux:hover {
+            background-color: $luxury;
+            color: $white;
+        }
+    }
+}
+
+/* attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        width: auto;
+        height: auto;        
+    }
+
+    .container {
+        flex-direction: column;
+
+        .sedan {
+            border-radius: 10px 10px 0 0;
+        }
+    
+        .lux {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+    /* attribution */
+    .attribution {
+        right: 0;
+    }
+}
+
+
+
+
